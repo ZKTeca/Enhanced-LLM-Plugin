@@ -1,1 +1,1 @@
-module g
+module github.com/agi-cn
