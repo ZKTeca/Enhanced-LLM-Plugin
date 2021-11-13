@@ -1,1 +1,1 @@
-module github.com/agi-cn
+module github.com/agi-cn/llmplug
