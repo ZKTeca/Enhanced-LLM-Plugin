@@ -4,4 +4,5 @@ go 1.20
 
 require (
 	github.com/joho/godotenv v1.5.1
-	github.com/mnogu/go-
+	github.com/mnogu/go-calculator v0.0.1
+	
