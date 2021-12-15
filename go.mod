@@ -7,4 +7,4 @@ require (
 	github.com/mnogu/go-calculator v0.0.1
 	github.com/pkg/errors v0.9.1
 	github.com/sashabaranov/go-openai v1.9.0
-	gith
+	github.com/sirup
