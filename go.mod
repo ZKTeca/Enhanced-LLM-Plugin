@@ -8,4 +8,4 @@ require (
 	github.com/pkg/errors v0.9.1
 	github.com/sashabaranov/go-openai v1.9.0
 	github.com/sirupsen/logrus v1.9.0
-	gi
+	github.com/stretchr/te
