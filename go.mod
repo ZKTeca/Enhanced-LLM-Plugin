@@ -9,4 +9,7 @@ require (
 	github.com/sashabaranov/go-openai v1.9.0
 	github.com/sirupsen/logrus v1.9.0
 	github.com/stretchr/testify v1.8.4
-	google.golang.org/api v0
+	google.golang.org/api v0.120.0
+)
+
+require 
