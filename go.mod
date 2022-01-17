@@ -8,4 +8,5 @@ require (
 	github.com/pkg/errors v0.9.1
 	github.com/sashabaranov/go-openai v1.9.0
 	github.com/sirupsen/logrus v1.9.0
-	github.com/stretchr/te
+	github.com/stretchr/testify v1.8.4
+	google.gol
