@@ -13,4 +13,4 @@ require (
 )
 
 require (
-	cloud.google.co
+	cloud.google.com/go/compute v1.19.
