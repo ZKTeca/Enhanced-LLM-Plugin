@@ -13,4 +13,5 @@ require (
 )
 
 require (
-	cloud.google.com/go/compute v1.19.
+	cloud.google.com/go/compute v1.19.1 // indirect
+	c
