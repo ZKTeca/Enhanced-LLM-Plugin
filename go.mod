@@ -20,4 +20,5 @@ require (
 	github.com/golang/protobuf v1.5.3 // indirect
 	github.com/google/s2a-go v0.1.2 // indirect
 	github.com/google/uuid v1.3.0 // indirect
-	github.com/googleapis/enterprise-certificate-proxy v0.2.3 // indirec
+	github.com/googleapis/enterprise-certificate-proxy v0.2.3 // indirect
+	github.com/go
