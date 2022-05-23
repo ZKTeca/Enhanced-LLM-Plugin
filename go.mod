@@ -22,4 +22,5 @@ require (
 	github.com/google/uuid v1.3.0 // indirect
 	github.com/googleapis/enterprise-certificate-proxy v0.2.3 // indirect
 	github.com/googleapis/gax-go/v2 v2.8.0 // indirect
-	github.com/pmezard/go-difflib v1.0.0 // indire
+	github.com/pmezard/go-difflib v1.0.0 // indirect
+	go.opence
