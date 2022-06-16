@@ -26,4 +26,4 @@ require (
 	go.opencensus.io v0.24.0 // indirect
 	golang.org/x/crypto v0.8.0 // indirect
 	golang.org/x/net v0.9.0 // indirect
-	gola
+	golang.org/x
