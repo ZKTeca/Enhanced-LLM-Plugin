@@ -1,3 +1,3 @@
 package llmplugin
 
-import "github.co
+import "github.com/sirupsen/lo
