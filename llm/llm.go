@@ -6,4 +6,7 @@ import (
 	"github.com/sashabaranov/go-openai"
 )
 
-type Role s
+type Role string
+
+const (
+	
