@@ -14,4 +14,4 @@ const (
 	RoleSystem    Role = openai.ChatMessageRoleSystem
 )
 
-func (r R
+func (r Role) String(
