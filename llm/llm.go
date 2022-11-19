@@ -10,4 +10,4 @@ type Role string
 
 const (
 	RoleUser      Role = openai.ChatMessageRoleUser
-	RoleAssis
+	RoleAssistant Role = ope
