@@ -9,4 +9,5 @@ import (
 type Role string
 
 const (
-	RoleUser      Role = openai.ChatMessageRole
+	RoleUser      Role = openai.ChatMessageRoleUser
+	RoleAssis
