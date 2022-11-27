@@ -15,4 +15,5 @@ const (
 )
 
 func (r Role) String() string {
-	retur
+	return string(r)
+}
