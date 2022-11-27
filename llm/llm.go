@@ -14,4 +14,5 @@ const (
 	RoleSystem    Role = openai.ChatMessageRoleSystem
 )
 
-func (r Role) String(
+func (r Role) String() string {
+	retur
