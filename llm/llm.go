@@ -17,3 +17,5 @@ const (
 func (r Role) String() string {
 	return string(r)
 }
+
+type Ll
