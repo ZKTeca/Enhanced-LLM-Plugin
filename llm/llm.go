@@ -18,4 +18,4 @@ func (r Role) String() string {
 	return string(r)
 }
 
-type Ll
+type LlmMessage struct {
