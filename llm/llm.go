@@ -20,3 +20,4 @@ func (r Role) String() string {
 
 type LlmMessage struct {
 	Role    Role
+	Content st
