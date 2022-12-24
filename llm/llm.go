@@ -23,4 +23,4 @@ type LlmMessage struct {
 	Content string
 }
 
-type
+type LlmAnswer str
