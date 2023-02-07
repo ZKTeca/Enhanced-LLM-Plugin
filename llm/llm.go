@@ -25,4 +25,6 @@ type LlmMessage struct {
 
 type LlmAnswer struct {
 	Role    string
-	Con
+	Content string
+}
+
