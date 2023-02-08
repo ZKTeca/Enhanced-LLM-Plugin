@@ -28,3 +28,4 @@ type LlmAnswer struct {
 	Content string
 }
 
+type LLMer in
