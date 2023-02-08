@@ -28,4 +28,5 @@ type LlmAnswer struct {
 	Content string
 }
 
-type LLMer in
+type LLMer interface {
+	C
