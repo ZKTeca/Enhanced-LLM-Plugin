@@ -33,4 +33,4 @@ type LLMer interface {
 }
 
 type Summarizer interface {
-	Summary(ctx co
+	Summary(ctx context.Context, c
