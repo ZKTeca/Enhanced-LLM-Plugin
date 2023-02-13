@@ -29,4 +29,4 @@ type LlmAnswer struct {
 }
 
 type LLMer interface {
-	Chat(ctx context.Context, messages []LlmMessage)
+	Chat(ctx context.Context, messages []LlmMessage) (*LlmAnswer, e
