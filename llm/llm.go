@@ -33,3 +33,4 @@ type LLMer interface {
 }
 
 type Summarizer interface {
+	Summary(ctx co
