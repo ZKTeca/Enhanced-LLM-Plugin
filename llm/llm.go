@@ -32,4 +32,4 @@ type LLMer interface {
 	Chat(ctx context.Context, messages []LlmMessage) (*LlmAnswer, error)
 }
 
-ty
+type Summarizer i
