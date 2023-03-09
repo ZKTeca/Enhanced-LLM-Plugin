@@ -45,3 +45,15 @@ func (c ChatGPT) Summary(ctx context.Context, content string) (string, error) {
 		{
 			Role:    llm.RoleUser,
 			Content: content,
+		},
+	}
+
+	answer, err := c.Chat(ctx, messages)
+	if err != nil {
+		return "", err
+	}
+
+	return answer.Content, nil
+}
+
+func (c ChatGPT) Chat(ctx context.Context, messages []llm.LlmMessage) (*llm.LlmAnswer, error) {
