@@ -72,3 +72,19 @@ func (c ChatGPT) makeChatGPTMessage(messages []llm.LlmMessage) []openai.ChatComp
 			Role:    m.Role.String(),
 			Content: m.Content,
 		})
+	}
+
+	return chatGPTMessages
+}
+
+func (c ChatGPT) send(ctx context.Context, messages []openai.ChatCompletionMessage) (*llm.LlmAnswer, error) {
+
+	resp, err := c.client.CreateChatCompletion(ctx, openai.ChatCompletionRequest{
+		Model:    c.model,
+		Messages: messages,
+	})
+	if err != nil {
+		return nil, err
+	}
+
+	if choices := resp.Choices; len(choices) == 0 {
