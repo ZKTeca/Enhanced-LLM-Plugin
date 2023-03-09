@@ -57,3 +57,18 @@ func (c ChatGPT) Summary(ctx context.Context, content string) (string, error) {
 }
 
 func (c ChatGPT) Chat(ctx context.Context, messages []llm.LlmMessage) (*llm.LlmAnswer, error) {
+
+	chatGPTMessages := c.makeChatGPTMessage(messages)
+
+	return c.send(ctx, chatGPTMessages)
+
+}
+
+func (c ChatGPT) makeChatGPTMessage(messages []llm.LlmMessage) []openai.ChatCompletionMessage {
+
+	chatGPTMessages := make([]openai.ChatCompletionMessage, 0, len(messages))
+	for _, m := range messages {
+		chatGPTMessages = append(chatGPTMessages, openai.ChatCompletionMessage{
+			Role:    m.Role.String(),
+			Content: m.Content,
+		})
