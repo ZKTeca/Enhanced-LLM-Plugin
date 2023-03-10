@@ -101,3 +101,6 @@ func (c ChatGPT) convertLlmAnswer(openaiResp openai.ChatCompletionResponse) *llm
 
 	return &llm.LlmAnswer{
 		Role:    choices.Message.Role,
+		Content: choices.Message.Content,
+	}
+}
