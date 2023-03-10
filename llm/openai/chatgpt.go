@@ -88,3 +88,16 @@ func (c ChatGPT) send(ctx context.Context, messages []openai.ChatCompletionMessa
 	}
 
 	if choices := resp.Choices; len(choices) == 0 {
+		return nil, errors.New("got empty ChatGPT response")
+	}
+
+	answer := c.convertLlmAnswer(resp)
+	return answer, nil
+}
+
+func (c ChatGPT) convertLlmAnswer(openaiResp openai.ChatCompletionResponse) *llm.LlmAnswer {
+
+	choices := openaiResp.Choices[0]
+
+	return &llm.LlmAnswer{
+		Role:    choices.Message.Role,
