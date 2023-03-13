@@ -36,3 +36,9 @@ func (p SimplePlugin) GetInputExample() string {
 }
 
 func (p SimplePlugin) GetDesc() string {
+	return p.Desc
+}
+
+func (p SimplePlugin) Do(ctx context.Context, query string) (answer string, err error) {
+	return p.DoFunc(ctx, query)
+}
