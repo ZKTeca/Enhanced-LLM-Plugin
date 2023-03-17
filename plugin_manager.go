@@ -15,3 +15,22 @@ type PluginContext struct {
 	Plugin
 
 	// Input for handle function of plugin.
+	Input string
+}
+
+type PluginManager struct {
+	llmer llm.LLMer
+
+	// plugins <key:name, value:Plugin>
+	plugins map[string]Plugin
+}
+
+type PluginManagerOpt func(manager *PluginManager)
+
+// WithPlugin enable one plugin.
+func WithPlugin(p Plugin) PluginManagerOpt {
+
+	return func(manager *PluginManager) {
+		name := strings.ToLower(p.GetName())
+		if _, ok := manager.plugins[name]; !ok {
+			manager.plugins[name] = p
