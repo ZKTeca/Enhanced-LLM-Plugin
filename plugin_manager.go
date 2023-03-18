@@ -46,3 +46,16 @@ func WithPlugins(plugins []Plugin) PluginManagerOpt {
 		for _, p := range plugins {
 			opt := WithPlugin(p)
 			opt(manager)
+		}
+	}
+}
+
+// NewPluginManager create plugin manager.
+func NewPluginManager(llmer llm.LLMer, opts ...PluginManagerOpt) *PluginManager {
+
+	manager := &PluginManager{
+		llmer:   llmer,
+		plugins: make(map[string]Plugin, 4),
+	}
+
+	for _, opt := range opts {
