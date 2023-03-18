@@ -34,3 +34,15 @@ func WithPlugin(p Plugin) PluginManagerOpt {
 		name := strings.ToLower(p.GetName())
 		if _, ok := manager.plugins[name]; !ok {
 			manager.plugins[name] = p
+		}
+	}
+}
+
+// WithPlugins enable multiple plugins.
+func WithPlugins(plugins []Plugin) PluginManagerOpt {
+
+	return func(manager *PluginManager) {
+
+		for _, p := range plugins {
+			opt := WithPlugin(p)
+			opt(manager)
