@@ -59,3 +59,13 @@ func NewPluginManager(llmer llm.LLMer, opts ...PluginManagerOpt) *PluginManager 
 	}
 
 	for _, opt := range opts {
+		opt(manager)
+	}
+
+	return manager
+}
+
+// Select to choice some plugin to finish the task.
+func (m *PluginManager) Select(ctx context.Context, query string) ([]PluginContext, error) {
+
+	answer, err := m.chatWithLlm(ctx, query)
