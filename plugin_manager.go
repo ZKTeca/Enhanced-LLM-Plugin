@@ -69,3 +69,13 @@ func NewPluginManager(llmer llm.LLMer, opts ...PluginManagerOpt) *PluginManager 
 func (m *PluginManager) Select(ctx context.Context, query string) ([]PluginContext, error) {
 
 	answer, err := m.chatWithLlm(ctx, query)
+	if err != nil {
+		logrus.Errorf("chat with llm error: %v", err)
+		return nil, err
+	}
+
+	pluginCtxs := m.choicePlugins(answer)
+
+	// for debug
+	for _, c := range pluginCtxs {
+		logrus.Debugf("query: %s choice plugins: %s input: %s", query, c.GetName(), c.Input)
