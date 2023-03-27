@@ -79,3 +79,11 @@ func (m *PluginManager) Select(ctx context.Context, query string) ([]PluginConte
 	// for debug
 	for _, c := range pluginCtxs {
 		logrus.Debugf("query: %s choice plugins: %s input: %s", query, c.GetName(), c.Input)
+	}
+
+	return pluginCtxs, nil
+}
+
+func (m *PluginManager) makePrompt(query string) string {
+
+	tools := m.makeTaskList()
