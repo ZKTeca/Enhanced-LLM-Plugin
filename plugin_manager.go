@@ -87,3 +87,13 @@ func (m *PluginManager) Select(ctx context.Context, query string) ([]PluginConte
 func (m *PluginManager) makePrompt(query string) string {
 
 	tools := m.makeTaskList()
+
+	prompt := fmt.Sprintf(`You will performs one task based on the following object:
+	%s
+
+	You can call one or multiple of the following functions in triple backticks:
+	'''
+	%s
+	'''
+
+	In each response, you must start with a function call like Tool name and args, split by ':',like:
