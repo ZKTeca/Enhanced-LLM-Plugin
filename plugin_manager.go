@@ -136,3 +136,15 @@ func (m *PluginManager) chatWithLlm(ctx context.Context, query string) (string, 
 	messages := []llm.LlmMessage{
 		{
 			Role:    llm.RoleSystem,
+			Content: "You are an helpful and kind assistant to answer questions that can use tools to interact with real world and get access to the latest information.",
+		},
+		{
+			Role:    llm.RoleUser,
+			Content: prompt,
+		},
+	}
+
+	answer, err := m.llmer.Chat(ctx, messages)
+	if err != nil {
+		return "", err
+	}
