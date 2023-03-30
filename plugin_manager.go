@@ -125,3 +125,14 @@ func (m *PluginManager) makeTaskList() string {
 		)
 
 		lines = append(lines, line)
+	}
+
+	return strings.Join(lines, "\n")
+}
+
+func (m *PluginManager) chatWithLlm(ctx context.Context, query string) (string, error) {
+	prompt := m.makePrompt(query)
+
+	messages := []llm.LlmMessage{
+		{
+			Role:    llm.RoleSystem,
