@@ -112,3 +112,16 @@ func (m *PluginManager) makePrompt(query string) string {
 }
 
 func (m *PluginManager) makeTaskList() string {
+
+	lines := make([]string, 0, len(m.plugins))
+
+	for _, p := range m.plugins {
+
+		line := fmt.Sprintf(
+			`- %s, Input Example: %s, It works as: %s`,
+			p.GetName(),
+			p.GetInputExample(),
+			p.GetDesc(),
+		)
+
+		lines = append(lines, line)
