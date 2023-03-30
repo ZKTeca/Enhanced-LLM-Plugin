@@ -97,3 +97,18 @@ func (m *PluginManager) makePrompt(query string) string {
 	'''
 
 	In each response, you must start with a function call like Tool name and args, split by ':',like:
+	Google: query
+	Weather:
+
+	Don't explain why you use a tool. If you cannot figure out the answer, you say 'I don’t know'.
+
+	Select only the corresponding tool and do not return any results.`,
+
+		query,
+		tools,
+	)
+
+	return prompt
+}
+
+func (m *PluginManager) makeTaskList() string {
