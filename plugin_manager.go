@@ -148,3 +148,10 @@ func (m *PluginManager) chatWithLlm(ctx context.Context, query string) (string, 
 	if err != nil {
 		return "", err
 	}
+
+	// logrus.Debugf("query: %s\n  answer: %+v", query, answer)
+
+	return answer.Content, nil
+}
+
+func (m *PluginManager) choicePlugins(answer string) []PluginContext {
