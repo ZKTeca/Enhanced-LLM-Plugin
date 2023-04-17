@@ -155,3 +155,24 @@ func (m *PluginManager) chatWithLlm(ctx context.Context, query string) (string, 
 }
 
 func (m *PluginManager) choicePlugins(answer string) []PluginContext {
+
+	lines := strings.Split(answer, "\n")
+
+	pluginContexts := make([]PluginContext, 0, len(lines))
+
+	for _, line := range lines {
+		logrus.Debugf("select one line: %s", line)
+
+		if line == `I don’t know.` {
+			continue
+		}
+
+		// Split by space
+		// IF only ONE column, it's function name without args.
+		// IF TWO column, it's function name with args.
+
+		ss := strings.Split(line, ":")
+		if len(ss) == 0 {
+			logrus.Warnf("answer line invalid: %s", line)
+			continue
+		}
