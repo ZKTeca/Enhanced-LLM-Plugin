@@ -18,3 +18,16 @@ import (
 )
 
 func TestManagerSelectPlugin(t *testing.T) {
+	manager := newChatGPTManager()
+
+	t.Run("Digital Computing", func(t *testing.T) {
+		pluginCtxs, err := manager.Select(context.Background(), "10 add 20 equals ?")
+		require.NoError(t, err)
+
+		require.Equal(t, 1, len(pluginCtxs))
+		require.True(t, includePlugin(pluginCtxs, "Calculator"))
+
+		choices := pluginCtxs[0]
+
+		answer, err := choices.Plugin.Do(context.Background(), choices.Input)
+		require.NoError(t, err)
