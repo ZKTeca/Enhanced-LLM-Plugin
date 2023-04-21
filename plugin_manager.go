@@ -176,3 +176,16 @@ func (m *PluginManager) choicePlugins(answer string) []PluginContext {
 			logrus.Warnf("answer line invalid: %s", line)
 			continue
 		}
+
+		name := strings.TrimSpace(strings.ToLower(ss[0]))
+		var input string
+		if len(ss) == 2 {
+			input = strings.TrimSpace(ss[1])
+		}
+
+		if p, ok := m.plugins[name]; ok {
+
+			logrus.Debugf("choice one plug with args: plugin=%v args=%v", name, input)
+
+			pluginCtx := PluginContext{
+				Plugin: p,
