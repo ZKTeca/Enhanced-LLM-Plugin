@@ -189,3 +189,12 @@ func (m *PluginManager) choicePlugins(answer string) []PluginContext {
 
 			pluginCtx := PluginContext{
 				Plugin: p,
+				Input:  input,
+			}
+
+			pluginContexts = append(pluginContexts, pluginCtx)
+		}
+	}
+
+	return pluginContexts
+}
