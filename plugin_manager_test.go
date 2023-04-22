@@ -38,3 +38,24 @@ func TestManagerSelectPlugin(t *testing.T) {
 	t.Run("Query Weather", func(t *testing.T) {
 		choices, err := manager.Select(context.Background(), "How is the weather today?")
 		assert.NoError(t, err)
+
+		assert.NotEmpty(t, choices)
+		assert.True(t, includePlugin(choices, "Weather"))
+	})
+
+	t.Run("Stable Diffusion", func(t *testing.T) {
+		choices, err := manager.Select(context.Background(), "Draw a girl image")
+		assert.NoError(t, err)
+
+		assert.NotEmpty(t, choices)
+		assert.True(t, includePlugin(choices, "StableDiffusion"))
+	})
+
+	t.Run("Google", func(t *testing.T) {
+
+		choices, err := manager.Select(context.Background(), "NBA 总决赛现在如何？")
+		assert.NoError(t, err)
+
+		assert.NotEmpty(t, choices)
+		assert.True(t, includePlugin(choices, "Google"))
+	})
