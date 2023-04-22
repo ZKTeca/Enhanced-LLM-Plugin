@@ -31,3 +31,10 @@ func TestManagerSelectPlugin(t *testing.T) {
 
 		answer, err := choices.Plugin.Do(context.Background(), choices.Input)
 		require.NoError(t, err)
+
+		assert.Equal(t, "30", answer)
+	})
+
+	t.Run("Query Weather", func(t *testing.T) {
+		choices, err := manager.Select(context.Background(), "How is the weather today?")
+		assert.NoError(t, err)
