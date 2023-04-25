@@ -74,3 +74,18 @@ func TestManagerSelectPlugin_WithoutChoice(t *testing.T) {
 }
 
 func includePlugin(pluginCtxs []PluginContext, target string) bool {
+	for _, p := range pluginCtxs {
+		if p.GetName() == target {
+			return true
+		}
+	}
+
+	return false
+}
+
+func TestChoicePlugins(t *testing.T) {
+
+	plugins := newPlugins()
+	manager := NewPluginManager(nil, WithPlugins(plugins))
+
+	t.Run("Choice Calculator", func(t *testing.T) {
