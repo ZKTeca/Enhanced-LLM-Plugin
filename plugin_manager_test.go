@@ -59,3 +59,18 @@ func TestManagerSelectPlugin(t *testing.T) {
 		assert.NotEmpty(t, choices)
 		assert.True(t, includePlugin(choices, "Google"))
 	})
+}
+
+func TestManagerSelectPlugin_WithoutChoice(t *testing.T) {
+	manager := newChatGPTManager()
+
+	t.Run("Quick Sort Source Code", func(t *testing.T) {
+		choices, err := manager.Select(context.Background(), "quick sort source code in python")
+		assert.NoError(t, err)
+
+		assert.Empty(t, choices)
+	})
+
+}
+
+func includePlugin(pluginCtxs []PluginContext, target string) bool {
