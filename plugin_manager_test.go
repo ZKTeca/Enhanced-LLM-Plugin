@@ -89,3 +89,16 @@ func TestChoicePlugins(t *testing.T) {
 	manager := NewPluginManager(nil, WithPlugins(plugins))
 
 	t.Run("Choice Calculator", func(t *testing.T) {
+
+		answer := "Calculator: 1+4"
+		got := manager.choicePlugins(answer)
+
+		assert.True(t,
+			includePlugin(got, "Calculator"))
+	})
+
+	t.Run("Choice Weather", func(t *testing.T) {
+		answer := "Weather: "
+		got := manager.choicePlugins(answer)
+
+		assert.True(t,
