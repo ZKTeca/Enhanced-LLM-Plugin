@@ -102,3 +102,16 @@ func TestChoicePlugins(t *testing.T) {
 		got := manager.choicePlugins(answer)
 
 		assert.True(t,
+			includePlugin(got, "Weather"))
+
+	})
+
+	t.Run("Choice Google", func(t *testing.T) {
+		answer := `Google: 今天NBA比赛赛程表`
+		got := manager.choicePlugins(answer)
+
+		assert.True(t,
+			includePlugin(got, "Google"))
+	})
+
+}
