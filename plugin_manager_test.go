@@ -115,3 +115,19 @@ func TestChoicePlugins(t *testing.T) {
 	})
 
 }
+
+func newChatGPTManager() *PluginManager {
+	_ = godotenv.Load() // ignore if file not exists
+
+	var llmer llm.LLMer
+	{
+		token := os.Getenv("OPENAI_TOKEN")
+		if len(token) == 0 {
+			panic("empty openai token: set os env: OPENAI_TOKEN")
+		}
+		llmer = openai.NewChatGPT(token, openai.WithModel("gpt-4"))
+	}
+
+	plugins := newPlugins()
+
+	return NewPluginManager(llmer, WithPlugins(plugins))
