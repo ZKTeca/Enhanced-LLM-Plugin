@@ -131,3 +131,20 @@ func newChatGPTManager() *PluginManager {
 	plugins := newPlugins()
 
 	return NewPluginManager(llmer, WithPlugins(plugins))
+}
+
+func newPlugins() []Plugin {
+
+	var (
+		googleEngineID = os.Getenv("GOOGLE_ENGINE_ID")
+		googleToken    = os.Getenv("GOOGLE_TOKEN")
+	)
+
+	plugins := []Plugin{
+		&SimplePlugin{
+			Name:         "Weather",
+			InputExample: ``,
+			Desc:         "Can check the weather forecast",
+			DoFunc: func(ctx context.Context, query string) (answer string, err error) {
+				answer = "Call Weather Plugin"
+				return
