@@ -148,3 +148,18 @@ func newPlugins() []Plugin {
 			DoFunc: func(ctx context.Context, query string) (answer string, err error) {
 				answer = "Call Weather Plugin"
 				return
+			},
+		},
+
+		calculator.NewCalculator(),
+
+		google.NewGoogle(googleEngineID, googleToken),
+	}
+
+	{ // stable diffusion
+		var sdAddr = os.Getenv("SD_ADDR")
+		if len(sdAddr) != 0 {
+			plugins = append(plugins,
+				stablediffusion.NewStableDiffusion(sdAddr),
+			)
+		}
