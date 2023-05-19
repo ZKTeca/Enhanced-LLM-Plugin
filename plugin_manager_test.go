@@ -163,3 +163,8 @@ func newPlugins() []Plugin {
 				stablediffusion.NewStableDiffusion(sdAddr),
 			)
 		}
+
+	}
+
+	return plugins
+}
