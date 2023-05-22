@@ -8,4 +8,5 @@ import (
 	"net/url"
 )
 
-const
+const (
+	plugin
