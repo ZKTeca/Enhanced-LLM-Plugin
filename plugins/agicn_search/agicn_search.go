@@ -9,4 +9,4 @@ import (
 )
 
 const (
-	plugin
+	pluginName         = "A
