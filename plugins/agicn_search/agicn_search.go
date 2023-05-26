@@ -9,4 +9,5 @@ import (
 )
 
 const (
-	pluginName         = "A
+	pluginName         = "AgicnSearch"
+	pluginIn
