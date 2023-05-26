@@ -10,4 +10,4 @@ import (
 
 const (
 	pluginName         = "AgicnSearch"
-	pluginIn
+	pluginInputExample = "W
