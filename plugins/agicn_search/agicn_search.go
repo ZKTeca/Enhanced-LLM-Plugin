@@ -10,4 +10,4 @@ import (
 
 const (
 	pluginName         = "AgicnSearch"
-	pluginInputExample = "W
+	pluginInputExample = "Who is Google bos
