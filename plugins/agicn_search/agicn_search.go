@@ -11,4 +11,4 @@ import (
 const (
 	pluginName         = "AgicnSearch"
 	pluginInputExample = "Who is Google boss?"
-	pluginD
+	pluginDesc         =
