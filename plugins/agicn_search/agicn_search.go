@@ -11,4 +11,6 @@ import (
 const (
 	pluginName         = "AgicnSearch"
 	pluginInputExample = "Who is Google boss?"
-	pluginDesc         = `Search something by que
+	pluginDesc         = `Search something by query input.`
+
+	baseURL = 
