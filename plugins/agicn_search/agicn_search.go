@@ -13,4 +13,7 @@ const (
 	pluginInputExample = "Who is Google boss?"
 	pluginDesc         = `Search something by query input.`
 
-	baseURL = "https://agicn-ducksearch.vercel.app/
+	baseURL = "https://agicn-ducksearch.vercel.app/search"
+)
+
+typ
