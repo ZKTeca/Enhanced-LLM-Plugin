@@ -16,4 +16,4 @@ const (
 	baseURL = "https://agicn-ducksearch.vercel.app/search"
 )
 
-typ
+type searchResp
