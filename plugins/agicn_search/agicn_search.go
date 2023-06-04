@@ -17,4 +17,4 @@ const (
 )
 
 type searchResponse struct {
-	T
+	Title string `json:
