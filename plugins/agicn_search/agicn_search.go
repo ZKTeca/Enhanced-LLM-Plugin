@@ -17,4 +17,5 @@ const (
 )
 
 type searchResponse struct {
-	Title string `json:
+	Title string `json:"title"`
+	Href  
