@@ -18,4 +18,4 @@ const (
 
 type searchResponse struct {
 	Title string `json:"title"`
-	Href  
+	Href  string `
