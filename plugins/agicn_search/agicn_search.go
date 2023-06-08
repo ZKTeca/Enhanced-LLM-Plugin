@@ -22,4 +22,4 @@ type searchResponse struct {
 	Body  string `json:"body"`
 }
 
-type
+type AgicnS
