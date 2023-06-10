@@ -23,4 +23,4 @@ type searchResponse struct {
 }
 
 type AgicnSearch struct {
-	cl
+	client *http.Cl
