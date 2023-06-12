@@ -26,4 +26,4 @@ type AgicnSearch struct {
 	client *http.Client
 }
 
-func N
+func NewAgicnSearch() 
