@@ -27,4 +27,5 @@ type AgicnSearch struct {
 }
 
 func NewAgicnSearch() *AgicnSearch {
-	c := &http.Cli
+	c := &http.Client{}
+	re
