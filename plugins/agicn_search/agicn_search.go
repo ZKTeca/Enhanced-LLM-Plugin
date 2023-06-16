@@ -30,3 +30,5 @@ func NewAgicnSearch() *AgicnSearch {
 	c := &http.Client{}
 	return &AgicnSearch{c}
 }
+
+func (s Agic
