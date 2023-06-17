@@ -31,4 +31,4 @@ func NewAgicnSearch() *AgicnSearch {
 	return &AgicnSearch{c}
 }
 
-func (s Agic
+func (s AgicnSearch) Do(c
