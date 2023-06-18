@@ -31,4 +31,4 @@ func NewAgicnSearch() *AgicnSearch {
 	return &AgicnSearch{c}
 }
 
-func (s AgicnSearch) Do(ctx context.Context, q
+func (s AgicnSearch) Do(ctx context.Context, query string) (answer
