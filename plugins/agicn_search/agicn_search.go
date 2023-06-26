@@ -32,4 +32,4 @@ func NewAgicnSearch() *AgicnSearch {
 }
 
 func (s AgicnSearch) Do(ctx context.Context, query string) (answer string, err error) {
-	sear
+	searchResults
