@@ -34,4 +34,7 @@ func NewAgicnSearch() *AgicnSearch {
 func (s AgicnSearch) Do(ctx context.Context, query string) (answer string, err error) {
 	searchResults, err := s.doHTTPRequest(ctx, query)
 	if err != nil {
-		return "",
+		return "", err
+	}
+
+	a
