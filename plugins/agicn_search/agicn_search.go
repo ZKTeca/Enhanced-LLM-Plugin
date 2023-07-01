@@ -37,4 +37,4 @@ func (s AgicnSearch) Do(ctx context.Context, query string) (answer string, err e
 		return "", err
 	}
 
-	a
+	answer = s.ma
