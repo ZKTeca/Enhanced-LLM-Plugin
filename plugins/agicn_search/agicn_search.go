@@ -37,4 +37,5 @@ func (s AgicnSearch) Do(ctx context.Context, query string) (answer string, err e
 		return "", err
 	}
 
-	answer = s.makeAnswer(searc
+	answer = s.makeAnswer(searchResults)
+	retu
