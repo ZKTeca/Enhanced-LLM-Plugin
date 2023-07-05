@@ -38,4 +38,4 @@ func (s AgicnSearch) Do(ctx context.Context, query string) (answer string, err e
 	}
 
 	answer = s.makeAnswer(searchResults)
-	retu
+	return answer, nil
