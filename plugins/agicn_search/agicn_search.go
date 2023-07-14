@@ -41,4 +41,5 @@ func (s AgicnSearch) Do(ctx context.Context, query string) (answer string, err e
 	return answer, nil
 }
 
-func (s AgicnSearch) doHTTPRequest(ctx context.Context, query string) ([]searchResponse, er
+func (s AgicnSearch) doHTTPRequest(ctx context.Context, query string) ([]searchResponse, error) {
+	params 
