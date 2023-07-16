@@ -42,4 +42,4 @@ func (s AgicnSearch) Do(ctx context.Context, query string) (answer string, err e
 }
 
 func (s AgicnSearch) doHTTPRequest(ctx context.Context, query string) ([]searchResponse, error) {
-	params 
+	params := url.Va
