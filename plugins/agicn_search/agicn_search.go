@@ -45,4 +45,4 @@ func (s AgicnSearch) doHTTPRequest(ctx context.Context, query string) ([]searchR
 	params := url.Values{}
 	params.Add("q", query)
 
-	url
+	url := fmt.S
