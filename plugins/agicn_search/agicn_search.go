@@ -47,4 +47,5 @@ func (s AgicnSearch) doHTTPRequest(ctx context.Context, query string) ([]searchR
 
 	url := fmt.Sprintf("%s?%s", baseURL, params.Encode())
 
-	req, err := http.NewRequest(http.MethodGet, url, 
+	req, err := http.NewRequest(http.MethodGet, url, nil)
+	if err
