@@ -53,4 +53,4 @@ func (s AgicnSearch) doHTTPRequest(ctx context.Context, query string) ([]searchR
 	}
 	req = req.WithContext(ctx)
 
-	re
+	resp, err 
