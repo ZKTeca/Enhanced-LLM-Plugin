@@ -55,4 +55,5 @@ func (s AgicnSearch) doHTTPRequest(ctx context.Context, query string) ([]searchR
 
 	resp, err := s.client.Do(req)
 	if err != nil {
-		return nil
+		return nil, err
+	}
