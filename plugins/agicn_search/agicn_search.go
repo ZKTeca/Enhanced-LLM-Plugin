@@ -57,3 +57,4 @@ func (s AgicnSearch) doHTTPRequest(ctx context.Context, query string) ([]searchR
 	if err != nil {
 		return nil, err
 	}
+	defer resp
