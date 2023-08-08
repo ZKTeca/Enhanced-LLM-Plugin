@@ -59,4 +59,4 @@ func (s AgicnSearch) doHTTPRequest(ctx context.Context, query string) ([]searchR
 	}
 	defer resp.Body.Close()
 
-	var sear
+	var searchResults [
