@@ -60,4 +60,4 @@ func (s AgicnSearch) doHTTPRequest(ctx context.Context, query string) ([]searchR
 	defer resp.Body.Close()
 
 	var searchResults []searchResponse
-	if 
+	if err := json.NewDec
