@@ -61,4 +61,5 @@ func (s AgicnSearch) doHTTPRequest(ctx context.Context, query string) ([]searchR
 
 	var searchResults []searchResponse
 	if err := json.NewDecoder(resp.Body).Decode(&searchResults); err != nil {
-		re
+		return nil, err
+	}
