@@ -64,4 +64,4 @@ func (s AgicnSearch) doHTTPRequest(ctx context.Context, query string) ([]searchR
 		return nil, err
 	}
 
-	return sear
+	return searchResults, n
