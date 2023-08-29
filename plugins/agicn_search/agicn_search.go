@@ -67,4 +67,4 @@ func (s AgicnSearch) doHTTPRequest(ctx context.Context, query string) ([]searchR
 	return searchResults, nil
 }
 
-func (s AgicnSearch) makeAnswer(searchResults []searchR
+func (s AgicnSearch) makeAnswer(searchResults []searchResponse) string {
