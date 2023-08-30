@@ -69,4 +69,4 @@ func (s AgicnSearch) doHTTPRequest(ctx context.Context, query string) ([]searchR
 
 func (s AgicnSearch) makeAnswer(searchResults []searchResponse) string {
 
-	if len(sea
+	if len(searchResults) 
