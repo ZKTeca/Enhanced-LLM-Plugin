@@ -73,4 +73,4 @@ func (s AgicnSearch) makeAnswer(searchResults []searchResponse) string {
 		return ""
 	}
 
-	resu
+	result := searchResul
