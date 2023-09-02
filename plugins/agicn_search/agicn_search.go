@@ -75,4 +75,4 @@ func (s AgicnSearch) makeAnswer(searchResults []searchResponse) string {
 
 	result := searchResults[0]
 
-	re
+	return fmt
