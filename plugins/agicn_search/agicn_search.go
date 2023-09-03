@@ -75,4 +75,4 @@ func (s AgicnSearch) makeAnswer(searchResults []searchResponse) string {
 
 	result := searchResults[0]
 
-	return fmt.Sprintf("%s\n%s\
+	return fmt.Sprintf("%s\n%s\n%s", result.Title
