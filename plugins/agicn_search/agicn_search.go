@@ -78,4 +78,4 @@ func (s AgicnSearch) makeAnswer(searchResults []searchResponse) string {
 	return fmt.Sprintf("%s\n%s\n%s", result.Title, result.Body, result.Href)
 }
 
-func (s A
+func (s AgicnSearch) GetNa
