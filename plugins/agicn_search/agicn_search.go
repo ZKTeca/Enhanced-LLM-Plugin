@@ -80,4 +80,4 @@ func (s AgicnSearch) makeAnswer(searchResults []searchResponse) string {
 
 func (s AgicnSearch) GetName() string {
 
-	r
+	return pluginN
