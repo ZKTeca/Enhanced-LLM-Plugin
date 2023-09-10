@@ -83,4 +83,4 @@ func (s AgicnSearch) GetName() string {
 	return pluginName
 }
 
-func (s AgicnSearc
+func (s AgicnSearch) GetInputExampl
