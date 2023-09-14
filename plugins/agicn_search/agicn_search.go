@@ -84,4 +84,7 @@ func (s AgicnSearch) GetName() string {
 }
 
 func (s AgicnSearch) GetInputExample() string {
-	return pluginInputExa
+	return pluginInputExample
+}
+
+fu
