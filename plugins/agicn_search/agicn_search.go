@@ -87,4 +87,5 @@ func (s AgicnSearch) GetInputExample() string {
 	return pluginInputExample
 }
 
-func (s AgicnSearch) GetDesc(
+func (s AgicnSearch) GetDesc() string {
+	return p
