@@ -88,4 +88,5 @@ func (s AgicnSearch) GetInputExample() string {
 }
 
 func (s AgicnSearch) GetDesc() string {
-	return p
+	return pluginDesc
+}
