@@ -39,3 +39,6 @@ func TestAgicnSearch(t *testing.T) {
 			assert.NotEmpty(t, answer)
 
 			t.Logf("query=%s\nresult:%s", tc.query, answer)
+		})
+	}
+}
