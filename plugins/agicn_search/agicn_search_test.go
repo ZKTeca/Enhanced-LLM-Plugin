@@ -28,3 +28,14 @@ func TestAgicnSearch(t *testing.T) {
 	}
 
 	s := NewAgicnSearch()
+
+	for _, tc := range ts {
+
+		t.Run(tc.testname, func(t *testing.T) {
+
+			answer, err := s.Do(context.Background(), tc.query)
+			assert.NoError(t, err)
+
+			assert.NotEmpty(t, answer)
+
+			t.Logf("query=%s\nresult:%s", tc.query, answer)
