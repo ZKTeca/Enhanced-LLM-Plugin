@@ -20,3 +20,19 @@ func NewCalculator() *Calculator {
 
 	return &Calculator{}
 }
+
+func (c Calculator) GetInputExample() string {
+	return pluginInputExample
+}
+
+func (Calculator) Do(ctx context.Context, query string) (answer string, err error) {
+
+	result, err := calculator.Calculate(query)
+	if err != nil {
+		return "", err
+	}
+
+	return fmt.Sprintf("%v", result), nil
+}
+
+func (c Calculator) GetName() string {
