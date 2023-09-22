@@ -36,3 +36,9 @@ func (Calculator) Do(ctx context.Context, query string) (answer string, err erro
 }
 
 func (c Calculator) GetName() string {
+	return pluginName
+}
+
+func (c Calculator) GetDesc() string {
+	return pluginDesc
+}
