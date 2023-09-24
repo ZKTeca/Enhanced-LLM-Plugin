@@ -6,3 +6,22 @@
 package google
 
 import (
+	"context"
+	"fmt"
+	"strings"
+
+	"github.com/agi-cn/llmplugin/llm"
+	"github.com/pkg/errors"
+	"google.golang.org/api/customsearch/v1"
+	"google.golang.org/api/option"
+)
+
+const (
+	pluginName = "Google"
+
+	pluginInputExample = "Who is Google boss?"
+
+	pluginDesc = `Search something on the Internet by query input. You can search online to get the information you need, especially to get valid real-time information.`
+)
+
+type Google struct {
