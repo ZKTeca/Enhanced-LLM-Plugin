@@ -25,3 +25,14 @@ const (
 )
 
 type Google struct {
+	customSearchID string
+	apiToken       string
+
+	summarizer llm.Summarizer
+}
+
+func NewGoogle(customSearchID, apiToken string, options ...Option) *Google {
+	g := &Google{
+		customSearchID: customSearchID,
+		apiToken:       apiToken,
+	}
