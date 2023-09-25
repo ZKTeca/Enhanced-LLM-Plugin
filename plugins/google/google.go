@@ -36,3 +36,20 @@ func NewGoogle(customSearchID, apiToken string, options ...Option) *Google {
 		customSearchID: customSearchID,
 		apiToken:       apiToken,
 	}
+
+	for _, o := range options {
+		o(g)
+	}
+
+	return g
+}
+
+func (g Google) Do(ctx context.Context, query string) (answer string, err error) {
+
+	results, err := g.doSearch(ctx, query)
+	if err != nil {
+		return "", err
+	}
+
+	return g.makeResult(ctx, query, results)
+}
