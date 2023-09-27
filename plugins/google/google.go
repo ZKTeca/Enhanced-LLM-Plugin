@@ -72,3 +72,14 @@ func (g Google) makeResult(ctx context.Context, query string, results *customsea
 
 	items := results.Items
 	if len(items) == 0 {
+		return "Google don't known", nil
+	}
+
+	if g.summarizer == nil {
+		return g.makeRawResult(ctx, items)
+	} else {
+		return g.makeResultBySummary(ctx, query, items)
+	}
+}
+
+func (g Google) makeRawResult(ctx context.Context, items []*customsearch.Result) (string, error) {
