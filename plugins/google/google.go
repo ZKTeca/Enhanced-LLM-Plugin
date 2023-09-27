@@ -53,3 +53,22 @@ func (g Google) Do(ctx context.Context, query string) (answer string, err error)
 
 	return g.makeResult(ctx, query, results)
 }
+
+func (g Google) doSearch(ctx context.Context, query string) (*customsearch.Search, error) {
+	client, err := customsearch.NewService(ctx, option.WithAPIKey(g.apiToken))
+	if err != nil {
+		return nil, errors.Wrap(err, "new google service failed")
+	}
+
+	results, err := client.Cse.List().Q(query).Cx(g.customSearchID).Do()
+	if err != nil {
+		return nil, errors.Wrap(err, "google search failed")
+	}
+
+	return results, nil
+}
+
+func (g Google) makeResult(ctx context.Context, query string, results *customsearch.Search) (string, error) {
+
+	items := results.Items
+	if len(items) == 0 {
