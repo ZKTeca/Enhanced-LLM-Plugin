@@ -83,3 +83,19 @@ func (g Google) makeResult(ctx context.Context, query string, results *customsea
 }
 
 func (g Google) makeRawResult(ctx context.Context, items []*customsearch.Result) (string, error) {
+	// Only return top1 result without llm summary
+	item := items[0]
+
+	content := fmt.Sprintf("%s\n%s\n%s",
+		item.Title,
+		item.Snippet,
+		item.Link,
+	)
+	return content, nil
+}
+
+func (g Google) makeResultBySummary(ctx context.Context, query string, items []*customsearch.Result) (string, error) {
+
+	prompt := `User query: %s.
+
+Here is the google search result, you task is the following,
