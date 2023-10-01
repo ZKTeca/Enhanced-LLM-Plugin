@@ -127,3 +127,25 @@ Summarize the following text delimited by triple Triple dashes. Each line below 
 			item.Title,
 			item.Snippet,
 			item.Link,
+		)
+
+		lines = append(lines, line)
+	}
+
+	allResult := strings.Join(lines, "\n")
+	content := fmt.Sprintf(prompt, query, allResult)
+
+	return g.summarizer.Summary(ctx, content)
+}
+
+func (g Google) GetName() string {
+	return pluginName
+}
+
+func (g Google) GetInputExample() string {
+	return pluginInputExample
+}
+
+func (g Google) GetDesc() string {
+	return pluginDesc
+}
