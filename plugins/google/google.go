@@ -113,3 +113,17 @@ Summarize the following text delimited by triple Triple dashes. Each line below 
 %s
 ---
 `
+
+	if len(items) > 10 {
+		items = items[:10]
+	}
+	lines := make([]string, 0, len(items))
+	for i, item := range items {
+		number := i + 1
+
+		line := fmt.Sprintf(
+			"%d. %s: %s (%s)",
+			number,
+			item.Title,
+			item.Snippet,
+			item.Link,
