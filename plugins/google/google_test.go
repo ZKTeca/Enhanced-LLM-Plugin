@@ -6,4 +6,5 @@ import (
 	"testing"
 
 	"github.com/agi-cn/llmplugin/llm/openai"
-	"github.com/joho
+	"github.com/joho/godotenv"
+	"gi
