@@ -10,4 +10,6 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestGoogleWithoutSummary(t *testing.T) 
+func TestGoogleWithoutSummary(t *testing.T) {
+
+	_ = godo
