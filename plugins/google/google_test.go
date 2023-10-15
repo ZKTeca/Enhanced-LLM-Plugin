@@ -12,4 +12,4 @@ import (
 
 func TestGoogleWithoutSummary(t *testing.T) {
 
-	_ = godo
+	_ = godotenv.Loa
