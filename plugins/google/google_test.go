@@ -12,4 +12,4 @@ import (
 
 func TestGoogleWithoutSummary(t *testing.T) {
 
-	_ = godotenv.Load() // ignore
+	_ = godotenv.Load() // ignore if file not exis
