@@ -15,4 +15,4 @@ func TestGoogleWithoutSummary(t *testing.T) {
 	_ = godotenv.Load() // ignore if file not exists
 
 	var (
-		apiToken = os.Ge
+		apiToken = os.Getenv("GOOGLE
