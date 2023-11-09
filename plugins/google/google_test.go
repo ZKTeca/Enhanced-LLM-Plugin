@@ -19,4 +19,4 @@ func TestGoogleWithoutSummary(t *testing.T) {
 		engineID = os.Getenv("GOOGLE_ENGINE_ID")
 	)
 
-	
+	if apiToken =
