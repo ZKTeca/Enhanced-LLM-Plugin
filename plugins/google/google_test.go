@@ -20,4 +20,4 @@ func TestGoogleWithoutSummary(t *testing.T) {
 	)
 
 	if apiToken == "" || engineID == "" {
-		t.Ski
+		t.Skip("missin
