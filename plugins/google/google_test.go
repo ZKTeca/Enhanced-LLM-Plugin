@@ -20,4 +20,7 @@ func TestGoogleWithoutSummary(t *testing.T) {
 	)
 
 	if apiToken == "" || engineID == "" {
-		t.Skip("missing google env: GOOGLE_TOKEN or GOOGLE_ENGINE_ID. SKIP
+		t.Skip("missing google env: GOOGLE_TOKEN or GOOGLE_ENGINE_ID. SKIP!")
+	}
+
+	g :
