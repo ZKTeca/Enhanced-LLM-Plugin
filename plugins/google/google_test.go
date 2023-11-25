@@ -25,4 +25,4 @@ func TestGoogleWithoutSummary(t *testing.T) {
 
 	g := NewGoogle(engineID, apiToken)
 
-	answer, err := g.Do(context.Backgr
+	answer, err := g.Do(context.Background(),
