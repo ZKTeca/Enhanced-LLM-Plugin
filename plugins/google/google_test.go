@@ -25,4 +25,5 @@ func TestGoogleWithoutSummary(t *testing.T) {
 
 	g := NewGoogle(engineID, apiToken)
 
-	answer, err := g.Do(context.Background(), "Who is Googl
+	answer, err := g.Do(context.Background(), "Who is Google Boss?")
+	asser
