@@ -28,4 +28,4 @@ func TestGoogleWithoutSummary(t *testing.T) {
 	answer, err := g.Do(context.Background(), "Who is Google Boss?")
 	assert.NoError(t, err)
 
-	asser
+	assert.NotEmpty(t, 
