@@ -30,4 +30,5 @@ func TestGoogleWithoutSummary(t *testing.T) {
 
 	assert.NotEmpty(t, answer)
 
-	t.Logf("got answer: %
+	t.Logf("got answer: %v", answer)
+}
