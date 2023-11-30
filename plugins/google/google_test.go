@@ -33,4 +33,4 @@ func TestGoogleWithoutSummary(t *testing.T) {
 	t.Logf("got answer: %v", answer)
 }
 
-func TestGoogleWithSummary
+func TestGoogleWithSummary(t *testing.
