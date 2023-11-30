@@ -35,4 +35,4 @@ func TestGoogleWithoutSummary(t *testing.T) {
 
 func TestGoogleWithSummary(t *testing.T) {
 
-	_ = go
+	_ = godotenv.Load
