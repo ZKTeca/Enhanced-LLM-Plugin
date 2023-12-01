@@ -37,3 +37,5 @@ func TestGoogleWithSummary(t *testing.T) {
 
 	_ = godotenv.Load() // ignore if file not exists
 
+	var (
+		apiT
