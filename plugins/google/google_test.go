@@ -39,4 +39,4 @@ func TestGoogleWithSummary(t *testing.T) {
 
 	var (
 		apiToken = os.Getenv("GOOGLE_TOKEN")
-		engineID
+		engineID = os.Getenv
