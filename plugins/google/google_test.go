@@ -44,4 +44,4 @@ func TestGoogleWithSummary(t *testing.T) {
 		openaiToken = os.Getenv("OPENAI_TOKEN")
 	)
 
-	if apiToke
+	if apiToken == "" || en
