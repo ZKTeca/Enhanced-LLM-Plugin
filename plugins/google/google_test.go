@@ -42,4 +42,6 @@ func TestGoogleWithSummary(t *testing.T) {
 		engineID = os.Getenv("GOOGLE_ENGINE_ID")
 
 		openaiToken = os.Getenv("OPENAI_TOKEN")
-	
+	)
+
+	if apiToke
