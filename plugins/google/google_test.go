@@ -45,4 +45,4 @@ func TestGoogleWithSummary(t *testing.T) {
 	)
 
 	if apiToken == "" || engineID == "" || openaiToken == "" {
-		t.Skip("missing
+		t.Skip("missing google env: GO
