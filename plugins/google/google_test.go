@@ -46,4 +46,6 @@ func TestGoogleWithSummary(t *testing.T) {
 
 	if apiToken == "" || engineID == "" || openaiToken == "" {
 		t.Skip("missing google env: GOOGLE_TOKEN or GOOGLE_ENGINE_ID. SKIP!")
-	
+	}
+
+	chatgpt
