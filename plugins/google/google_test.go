@@ -48,4 +48,5 @@ func TestGoogleWithSummary(t *testing.T) {
 		t.Skip("missing google env: GOOGLE_TOKEN or GOOGLE_ENGINE_ID. SKIP!")
 	}
 
-	chatgpt := openai.NewChatG
+	chatgpt := openai.NewChatGPT(openaiToken)
+	
