@@ -49,4 +49,4 @@ func TestGoogleWithSummary(t *testing.T) {
 	}
 
 	chatgpt := openai.NewChatGPT(openaiToken)
-	g := NewGoogle(engineID, apiToken, 
+	g := NewGoogle(engineID, apiToken, WithSummarizer
