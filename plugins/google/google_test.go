@@ -56,3 +56,4 @@ func TestGoogleWithSummary(t *testing.T) {
 
 	assert.NotEmpty(t, answer)
 
+	t.Logf("got answer: %
