@@ -54,4 +54,4 @@ func TestGoogleWithSummary(t *testing.T) {
 	answer, err := g.Do(context.Background(), "今年欧冠决赛是什么时候?")
 	assert.NoError(t, err)
 
-	a
+	assert.NotE
