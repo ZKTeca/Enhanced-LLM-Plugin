@@ -2,4 +2,4 @@ package google
 
 import "github.com/agi-cn/llmplugin/llm"
 
-type Option func
+type Option func(g *Google)
