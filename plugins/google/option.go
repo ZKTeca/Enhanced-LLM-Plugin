@@ -5,4 +5,6 @@ import "github.com/agi-cn/llmplugin/llm"
 type Option func(g *Google)
 
 // WithSummarizer 总结内容
-func WithSummarizer(summarizer llm.Summarizer) Opti
+func WithSummarizer(summarizer llm.Summarizer) Option {
+
+	retur
