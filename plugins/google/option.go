@@ -7,4 +7,4 @@ type Option func(g *Google)
 // WithSummarizer 总结内容
 func WithSummarizer(summarizer llm.Summarizer) Option {
 
-	retur
+	return func(g 
