@@ -8,4 +8,5 @@ type Option func(g *Google)
 func WithSummarizer(summarizer llm.Summarizer) Option {
 
 	return func(g *Google) {
-		g.summarizer = 
+		g.summarizer = summarizer
+	}
