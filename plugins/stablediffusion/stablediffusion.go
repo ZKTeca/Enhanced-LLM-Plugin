@@ -45,3 +45,14 @@ func (s *StableDiffusion) Do(ctx context.Context, query string) (answer string, 
 	defer resp.Body.Close()
 
 	var sdResp struct {
+		Result bool     `json:"result"`
+		Images []string `json:"images"` // base64
+	}
+
+	if err := json.NewDecoder(resp.Body).Decode(&sdResp); err != nil {
+		return "", err
+	}
+
+	if len(sdResp.Images) == 0 {
+		return "", nil
+	}
