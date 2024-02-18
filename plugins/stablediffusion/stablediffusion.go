@@ -34,3 +34,14 @@ func NewStableDiffusion(sdAddr string) *StableDiffusion {
 
 func (s *StableDiffusion) Do(ctx context.Context, query string) (answer string, err error) {
 	req, err := s.newRequest(ctx, query)
+	if err != nil {
+		return "", err
+	}
+
+	resp, err := s.client.Do(req)
+	if err != nil {
+		return "", err
+	}
+	defer resp.Body.Close()
+
+	var sdResp struct {
