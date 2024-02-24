@@ -56,3 +56,23 @@ func (s *StableDiffusion) Do(ctx context.Context, query string) (answer string, 
 	if len(sdResp.Images) == 0 {
 		return "", nil
 	}
+
+	return sdResp.Images[0], nil
+}
+
+func (s *StableDiffusion) newRequest(ctx context.Context, query string) (*http.Request, error) {
+	url := fmt.Sprintf("http://%v/sd", s.sdAddr)
+
+	body := map[string]interface{}{
+		"text": query,
+	}
+	data, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, url, bytes.NewReader(data))
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
