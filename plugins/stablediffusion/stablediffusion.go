@@ -76,3 +76,14 @@ func (s *StableDiffusion) newRequest(ctx context.Context, query string) (*http.R
 		return nil, err
 	}
 	req = req.WithContext(ctx)
+
+	return req, nil
+}
+
+func (StableDiffusion) GetName() string {
+	return pluginName
+}
+
+func (StableDiffusion) GetInputExample() string {
+	return pluginInputExample
+}
