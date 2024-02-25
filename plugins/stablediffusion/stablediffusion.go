@@ -87,3 +87,7 @@ func (StableDiffusion) GetName() string {
 func (StableDiffusion) GetInputExample() string {
 	return pluginInputExample
 }
+
+func (StableDiffusion) GetDesc() string {
+	return pluginDesc
+}
