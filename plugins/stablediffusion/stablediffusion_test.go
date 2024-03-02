@@ -19,3 +19,10 @@ func TestStableDiffusion(t *testing.T) {
 	require.NoError(t, err)
 
 	assert.NotEmpty(t, answer)
+
+	data, err := base64.StdEncoding.DecodeString(answer)
+	assert.NoError(t, err)
+
+	assert.NoError(t,
+		ioutil.WriteFile("1.jpg", data, 0644))
+}
