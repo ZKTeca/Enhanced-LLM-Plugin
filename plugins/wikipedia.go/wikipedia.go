@@ -1,1 +1,1 @@
-package wikip
+package wikipedia
