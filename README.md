@@ -1,3 +1,3 @@
 # Enhanced LLM Plugin 
 
-A better and
+A better and enhanced ver
