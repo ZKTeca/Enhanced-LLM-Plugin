@@ -10,4 +10,4 @@ Get Google Search token: [https://docs.chatkit.app/tools/google-search.html](htt
 
 ### 2.2 Stable Diffusion
 
-Generate photo by
+Generate photo by stable diffus
