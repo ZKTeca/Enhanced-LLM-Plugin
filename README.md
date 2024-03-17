@@ -8,4 +8,4 @@ A better and enhanced version of the LLM Plugin system, now maintained by ZKTeca
 
 Get Google Search token: [https://docs.chatkit.app/tools/google-search.html](https://docs.chatkit.app/tools/google-search.html)
 
-#
+### 2.2 Stable D
