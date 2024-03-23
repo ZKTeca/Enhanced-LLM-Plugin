@@ -10,4 +10,6 @@ Get Google Search token: [https://docs.chatkit.app/tools/google-search.html](htt
 
 ### 2.2 Stable Diffusion
 
-Generate photo by stable diffusion plugin, exampl
+Generate photo by stable diffusion plugin, example:
+
+![girl](.
