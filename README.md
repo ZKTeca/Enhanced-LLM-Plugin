@@ -17,3 +17,5 @@ Generate photo by stable diffusion plugin, example:
 ## 2. TESTING
 
 1. OpenAI:
+   ```bash
+   c
