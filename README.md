@@ -15,3 +15,5 @@ Generate photo by stable diffusion plugin, example:
 ![girl](./plugins/stablediffusion/test1.jpg)
 
 ## 2. TESTING
+
+1. OpenAI:
