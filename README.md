@@ -18,4 +18,4 @@ Generate photo by stable diffusion plugin, example:
 
 1. OpenAI:
    ```bash
-   c
+   cp .env.e
