@@ -21,4 +21,4 @@ Generate photo by stable diffusion plugin, example:
    cp .env.example .env
    ```
 
-2
+2. Google:
