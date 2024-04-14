@@ -23,4 +23,6 @@ Generate photo by stable diffusion plugin, example:
 
 2. Google:
    ```bash
-   cd plugins/
+   cd plugins/google
+
+   cp
