@@ -25,4 +25,4 @@ Generate photo by stable diffusion plugin, example:
    ```bash
    cd plugins/google
 
-   cp
+   cp .env.example 
