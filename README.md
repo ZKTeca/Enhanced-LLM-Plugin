@@ -30,4 +30,5 @@ Generate photo by stable diffusion plugin, example:
 
 Run test:
 
-```
+```bash
+ go test -
