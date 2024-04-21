@@ -35,4 +35,6 @@ Run test:
 ```
 
 
-## 3. REL
+## 3. RELEASE
+
+### v0.1.
