@@ -37,4 +37,6 @@ Run test:
 
 ## 3. RELEASE
 
-### v0.1.
+### v0.1.0
+
+1. Init p
