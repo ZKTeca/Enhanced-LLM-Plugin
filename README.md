@@ -39,4 +39,5 @@ Run test:
 
 ### v0.1.0
 
-1. Init p
+1. Init project.
+2. Su
