@@ -40,4 +40,4 @@ Run test:
 ### v0.1.0
 
 1. Init project.
-2. Su
+2. Support plugi
