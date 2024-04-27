@@ -40,4 +40,4 @@ Run test:
 ### v0.1.0
 
 1. Init project.
-2. Support plugin: Go
+2. Support plugin: Google for search, 
