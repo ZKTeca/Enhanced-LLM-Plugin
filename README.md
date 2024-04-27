@@ -43,4 +43,4 @@ Run test:
 2. Support plugin: Google for search, calculator for mathematical calculations.
 
 
-## 
+## Cont
