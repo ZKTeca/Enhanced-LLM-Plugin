@@ -45,4 +45,4 @@ Run test:
 
 ## Contribute
 
-We a
+We are open to
