@@ -45,4 +45,4 @@ Run test:
 
 ## Contribute
 
-We are open to enhancement
+We are open to enhancements & bug-fixes so
